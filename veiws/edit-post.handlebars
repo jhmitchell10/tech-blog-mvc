@@ -1,0 +1,10 @@
+{{> navbar}}
+<div class="container">
+  <h2>Edit Post</h2>
+  <form id="editPostForm">
+    <input type="text" id="title" value="{{title}}" required>
+    <textarea id="content">{{content}}</textarea>
+    <button type="submit">Update Post</button>
+  </form>
+</div>
+<script src="/js/dashboard.js"></script>

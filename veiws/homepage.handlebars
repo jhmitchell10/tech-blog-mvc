@@ -1,0 +1,7 @@
+{{> navbar user=user}}
+<div class="container">
+  <h1>Welcome to Tech Blog</h1>
+  {{#each posts}}
+    {{> post-info this}}
+  {{/each}}
+</div>

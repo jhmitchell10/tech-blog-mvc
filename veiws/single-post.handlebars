@@ -1,0 +1,17 @@
+{{> navbar user=user}}
+<div class="container">
+  <h2>{{title}}</h2>
+  <p>{{content}}</p>
+  <p>By: {{user.username}} on {{formatDate createdAt}}</p>
+  <form id="commentForm">
+    <input type="hidden" id="postId" value="{{id}}">
+    <textarea id="content" placeholder="Leave a comment..." required></textarea>
+    <button type="submit">Submit Comment</button>
+  </form>
+  <div id="comments">
+    {{#each comments}}
+      <p>{{content}} - by {{user.username}}</p>
+    {{/each}}
+  </div>
+</div>
+<script src="/js/comment.js"></script>

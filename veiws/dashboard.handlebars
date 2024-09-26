@@ -1,0 +1,13 @@
+{{> navbar user=user}}
+<div class="container">
+  <h2>Your Dashboard</h2>
+  <a href="/new-post">Create New Post</a>
+  {{#each posts}}
+    <div>
+      <h3>{{title}}</h3>
+      <a href="/edit-post/{{id}}">Edit</a>
+      <button data-id="{{id}}" class="delete-post">Delete</button>
+    </div>
+  {{/each}}
+</div>
+<script src="/js/dashboard.js"></script>
